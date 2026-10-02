@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Мобильные игры 2026: шесть ситуаций на телефоне и что делать</title>
+<meta name="description" content="Что делать, когда мобильная игра пропала из магазина, просит доступ к контактам, греет телефон, списала деньги за покупку или зовёт ставить APK: смысл случая, проверка и шаг. Россия, 2026.">
+<link rel="canonical" href="https://mobilnoe-igry971.github.io/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Мобильные игры 2026: разбор шести ситуаций на телефоне">
+<meta property="og:description" content="Смысл, проверка и шаг по шести случаям: приложение исчезло из магазина, запрос доступа к контактам, нагрев, списание за покупку, сбой после обновления ОС, APK из демо.">
+<meta property="og:url" content="https://mobilnoe-igry971.github.io/">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --fog:#eceff3;--surface:#f7f9fb;--surface-2:#e0e5ec;--elevate:#ffffff;
+  --ink:#131922;--ink-2:#3e4854;--ink-3:#5d6977;--line:#d4dae2;--line-2:#a8b2bf;
+  --accent:#234a80;--accent-fill:#2d5a97;--accent-soft:#dde7f4;--on-accent:#f2f7fd;
+  --good:#1f6b58;--good-soft:#d8ece5;--bad:#9d3028;--bad-soft:#f3dedb;--warn:#866018;--warn-soft:#f0e7cf;
+  --selection:#dde7f4;--bar-muted:#ccd4df;
+  --b1:#234a80;--b2:#1f7a86;--b3:#7a5bb0;--b4:#b4652a;--b5:#436079;
+  --focus:var(--accent);--focus-ring:color-mix(in srgb,var(--accent) 30%,transparent);
+  --mig-display:"Cormorant Garamond","PT Serif",Georgia,serif;
+  --mig-text:"Inter","Segoe UI",Roboto,system-ui,sans-serif;
+  --fs-display:clamp(2.45rem,1.7rem + 3.1vw,3.65rem);--fs-h2:clamp(1.7rem,1.35rem + 1.3vw,2.2rem);
+  --fs-h3:1.1875rem;--fs-lead:clamp(1.075rem,1rem + .45vw,1.225rem);--fs-body:1.0625rem;--fs-ui:.9375rem;--fs-small:.875rem;--fs-micro:.75rem;
+  --g1:4px;--g2:8px;--g3:12px;--g4:16px;--g5:20px;--g6:24px;--g8:32px;--g10:40px;--g12:48px;--g16:64px;
+  --edge:clamp(16px,4vw,24px);--band:clamp(44px,6vw,76px);
+  --col-read:730px;--col-full:1060px;--col-hero:880px;
+  --rad1:4px;--rad2:8px;--rad3:12px;--rad4:18px;
+  --sh1:0 1px 0 rgba(19,25,34,.04),0 1px 2px rgba(19,25,34,.06);
+  --sh2:0 2px 7px rgba(19,25,34,.07),0 14px 28px -14px rgba(19,25,34,.2);
+  --sh3:0 0 0 1px var(--line-2),0 26px 44px -30px rgba(19,25,34,.34);
+  --ease:cubic-bezier(.22,1,.36,1);--spring:cubic-bezier(.34,1.56,.64,1);
+  --t1:120ms;--t2:200ms;--t3:320ms;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --fog:#0e131a;--surface:#151c25;--surface-2:#1d2630;--elevate:#222c38;
+  --ink:#e6ecf3;--ink-2:#aeb9c6;--ink-3:#808d9c;--line:#2a333f;--line-2:#3f4a58;
+  --accent:#86aee0;--accent-fill:#6f9bd4;--accent-soft:#1c2d45;--on-accent:#0c1017;
+  --good:#67c0a7;--good-soft:#153029;--bad:#e08279;--bad-soft:#331a17;--warn:#d2a648;--warn-soft:#2f2713;
+  --selection:#1c2d45;--bar-muted:#2c3744;
+  --b1:#6f9bd4;--b2:#4fb3bf;--b3:#a690d8;--b4:#d2894f;--b5:#7e97b4;
+  --sh1:inset 0 1px 0 rgba(255,255,255,.04),0 1px 2px rgba(0,0,0,.42);
+  --sh2:0 2px 9px rgba(0,0,0,.52),0 18px 34px -18px rgba(0,0,0,.62);
+  --sh3:0 0 0 1px var(--line-2),inset 0 1px 0 rgba(255,255,255,.05),0 30px 50px -30px rgba(0,0,0,.72);
+  color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --fog:#0e131a;--surface:#151c25;--surface-2:#1d2630;--elevate:#222c38;
+  --ink:#e6ecf3;--ink-2:#aeb9c6;--ink-3:#808d9c;--line:#2a333f;--line-2:#3f4a58;
+  --accent:#86aee0;--accent-fill:#6f9bd4;--accent-soft:#1c2d45;--on-accent:#0c1017;
+  --good:#67c0a7;--good-soft:#153029;--bad:#e08279;--bad-soft:#331a17;--warn:#d2a648;--warn-soft:#2f2713;
+  --selection:#1c2d45;--bar-muted:#2c3744;
+  --b1:#6f9bd4;--b2:#4fb3bf;--b3:#a690d8;--b4:#d2894f;--b5:#7e97b4;
+  --sh1:inset 0 1px 0 rgba(255,255,255,.04),0 1px 2px rgba(0,0,0,.42);
+  --sh2:0 2px 9px rgba(0,0,0,.52),0 18px 34px -18px rgba(0,0,0,.62);
+  --sh3:0 0 0 1px var(--line-2),inset 0 1px 0 rgba(255,255,255,.05),0 30px 50px -30px rgba(0,0,0,.72);
+  color-scheme:dark;}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fog);color:var(--ink);font:400 var(--fs-body)/1.62 var(--mig-text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+p{margin:0 0 var(--g3);text-wrap:pretty}
+h1,h2{font-family:var(--mig-display);text-wrap:balance;margin:0;font-weight:600;letter-spacing:.004em}
+h1{font-size:var(--fs-display);line-height:1.04;font-weight:700;max-inline-size:20ch}
+h2{font-size:var(--fs-h2);line-height:1.1;font-weight:600}
+h3{font-family:var(--mig-text);font-size:var(--fs-h3);line-height:1.3;font-weight:600;margin:var(--g8) 0 var(--g2)}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px;transition:color var(--t1) var(--ease)}
+a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;box-shadow:0 0 0 5px var(--focus-ring)}
+::selection{background:var(--selection);color:var(--ink)}
+.mig-num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.mig-wrap{max-width:var(--col-read);margin-inline:auto;padding-inline:var(--edge)}
+.mig-wide{max-width:var(--col-full);margin-inline:auto;padding-inline:var(--edge)}
+.mig-hwrap{max-width:var(--col-hero);margin-inline:auto;padding-inline:var(--edge)}
+section[id]{scroll-margin-top:70px}
+.mig-dim{color:var(--ink-2)}.mig-faint{color:var(--ink-3)}
+.mig-small{font-size:var(--fs-small);line-height:1.5}.mig-micro{font-size:var(--fs-micro);line-height:1.35;letter-spacing:.015em}
+
+/* header */
+.mig-top{position:sticky;top:0;z-index:40;height:58px;background:color-mix(in srgb,var(--fog) 88%,transparent);backdrop-filter:none;border-bottom:1px solid var(--line);transition:box-shadow var(--t2) var(--ease)}
+.mig-top.pinned{box-shadow:var(--sh2)}
+.mig-top .mig-wide{height:100%;display:flex;align-items:center;justify-content:space-between;gap:var(--g4)}
+.mig-brand{display:inline-flex;align-items:center;gap:9px;font-family:var(--mig-display);font-weight:700;font-size:20px;letter-spacing:.01em;text-decoration:none;color:var(--ink);white-space:nowrap}
+.mig-brand:hover{color:var(--ink)}
+.mig-brand svg{width:26px;height:26px;flex:none}
+.mig-rail{display:flex;align-items:center;gap:var(--g4)}
+.mig-nav{display:flex;gap:var(--g5);font-size:14px;font-weight:500;overflow-x:auto;white-space:nowrap;scrollbar-width:none;mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent)}
+.mig-nav::-webkit-scrollbar{display:none}
+.mig-nav a{color:var(--ink-3);text-decoration:none;padding-block:4px}
+.mig-nav a:hover{color:var(--ink)}
+.mig-nav a[aria-current="true"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--accent)}
+@media (max-width:860px){.mig-nav{display:none}}
+.mig-theme{appearance:none;border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);width:36px;height:36px;border-radius:var(--rad2);cursor:pointer;display:grid;place-items:center;flex:none;transition:border-color var(--t1) var(--ease),color var(--t1) var(--ease)}
+.mig-theme:hover{border-color:var(--ink);color:var(--ink)}
+.mig-theme svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8}
+
+/* hero */
+.mig-hero{padding-block:var(--g12) var(--g10)}
+.mig-dateline{font-size:var(--fs-small);color:var(--ink-3);margin-bottom:var(--g2);letter-spacing:.01em}
+.mig-hero h1{margin:var(--g2) 0 var(--g4)}
+.mig-lead{font-size:var(--fs-lead);line-height:1.5;color:var(--ink-2);max-inline-size:60ch;margin-bottom:var(--g6)}
+.mig-callout{display:grid;grid-template-columns:48px 1fr;gap:var(--g4);background:var(--elevate);border:1px solid var(--line-2);border-radius:var(--rad4);padding:var(--g6) var(--g6);box-shadow:var(--sh3)}
+.mig-callout .mig-glyph{width:48px;height:48px;border-radius:var(--rad3);background:var(--accent-soft);display:grid;place-items:center}
+.mig-callout .mig-glyph svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.8}
+.mig-callout .mig-tag{display:inline-block;font-size:var(--fs-micro);font-weight:600;letter-spacing:.03em;text-transform:uppercase;border:1px solid var(--accent);color:var(--accent);border-radius:var(--rad1);padding:2px 8px}
+.mig-callout h2{font-family:var(--mig-display);font-size:1.7rem;margin:var(--g2) 0 var(--g2)}
+.mig-callout p{font-size:var(--fs-ui);color:var(--ink-2);margin-bottom:0}
+@media (max-width:620px){.mig-callout{grid-template-columns:1fr;padding:var(--g5)}}
+
+/* sections */
+.mig-sec{padding-block:var(--band)}
+.mig-sec.div{border-top:1px solid var(--line)}
+.mig-head{display:grid;grid-template-columns:44px 1fr;align-items:baseline;gap:var(--g3);margin-bottom:var(--g3)}
+.mig-head .mig-i{font-size:13px;color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.04em}
+@media (max-width:720px){.mig-head{grid-template-columns:1fr}.mig-head .mig-i{margin-bottom:-6px}}
+.mig-sub{color:var(--ink-2);max-inline-size:66ch;margin-bottom:var(--g5)}
+.mig-prose{max-inline-size:68ch}
+.mig-prose p{margin-bottom:var(--g3)}
+.mig-ans{font-size:var(--fs-body);max-inline-size:68ch;margin-bottom:var(--g5);padding-left:var(--g4);border-left:2px solid var(--accent)}
+.mig-ans strong{font-weight:600}
+
+/* chips */
+.mig-chiplab{font-size:var(--fs-small);color:var(--ink-3);margin-bottom:var(--g2)}
+.mig-chips{display:flex;gap:var(--g2);flex-wrap:wrap;margin-bottom:var(--g3)}
+@media (max-width:620px){.mig-chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent)}.mig-chips::-webkit-scrollbar{display:none}}
+.mig-chip{font:500 var(--fs-ui)/1.4 var(--mig-text);padding:7px 13px;min-height:36px;border-radius:var(--rad2);border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;transition:background-color var(--t1) var(--ease),border-color var(--t1) var(--ease),color var(--t1) var(--ease),transform var(--t2) var(--spring)}
+.mig-chip:hover{border-color:var(--ink);color:var(--ink)}
+.mig-chip:active{transform:scale(.96)}
+.mig-chip[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.mig-chip .c{font-size:var(--fs-micro);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.mig-chip[aria-pressed="true"] .c{color:var(--on-accent);opacity:.8}
+.mig-count{font-size:var(--fs-small);color:var(--ink-3);min-height:1.4em;margin-bottom:var(--g3)}
+
+/* tables */
+.mig-tw{border:1px solid var(--line);border-radius:var(--rad3);overflow-x:auto;scrollbar-gutter:stable;background:var(--surface)}
+.mig-tw.lead{box-shadow:var(--sh1)}
+table{border-collapse:collapse;width:100%;font-size:var(--fs-ui);line-height:1.45}
+table.mig-cases{min-width:860px}
+table.mig-data{min-width:540px}
+caption{caption-side:top;text-align:left;font-size:var(--fs-small);color:var(--ink-3);padding:var(--g3) var(--g4) var(--g2)}
+thead th{font-size:13px;font-weight:600;color:var(--ink-2);text-align:left;padding:var(--g3) var(--g4);border-bottom:2px solid var(--line-2);background:var(--surface);white-space:nowrap}
+tbody td{padding:14px var(--g4);border-top:1px solid var(--line);vertical-align:top}
+tbody tr:first-child td{border-top:0}
+tbody tr:hover td{background:var(--surface-2);transition:background-color var(--t1) var(--ease)}
+tbody tr[hidden]{display:none}
+table.mig-cases td:first-child,table.mig-cases th:first-child{position:sticky;left:0;background:var(--surface);box-shadow:1px 0 0 var(--line);z-index:1}
+table.mig-cases tbody tr:hover td:first-child{background:var(--surface-2)}
+td.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mig-case-ttl{font-weight:600;font-size:15px;color:var(--ink);display:flex;align-items:flex-start;gap:8px}
+.mig-case-ttl svg{width:22px;height:22px;flex:none;stroke:var(--accent);fill:none;stroke-width:1.7;margin-top:1px}
+.mig-risk{display:inline-flex;align-items:center;gap:5px;font-size:var(--fs-micro);font-weight:600;border-radius:var(--rad1);padding:2px 7px;white-space:nowrap}
+.mig-risk.hi{background:var(--bad-soft);color:var(--bad)}
+.mig-risk.md{background:var(--warn-soft);color:var(--warn)}
+.mig-risk.lo{background:var(--good-soft);color:var(--good)}
+.mig-do{color:var(--ink);font-weight:500}
+
+/* figures */
+figure.mig-viz{margin:var(--g6) 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--rad3);padding:var(--g4) 18px}
+@media (min-width:920px){figure.mig-viz{margin-inline:-28px}}
+figure.mig-viz svg{display:block;max-width:100%;overflow:visible}
+figure.mig-viz svg text{font-family:var(--mig-text);fill:var(--ink-2)}
+figure.mig-viz figcaption{font-size:var(--fs-small);color:var(--ink-3);margin-top:var(--g3)}
+figure.mig-viz .mig-tw{margin-top:var(--g4);border-radius:var(--rad2)}
+.mig-legend{display:flex;gap:var(--g4);flex-wrap:wrap;font-size:13px;color:var(--ink-2);margin-top:var(--g3)}
+.mig-legend span{display:inline-flex;align-items:center;gap:6px}
+.mig-legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+/* lists */
+ol.mig-steps{padding-left:0;list-style:none;counter-reset:s;display:grid;gap:var(--g3);max-inline-size:68ch}
+ol.mig-steps li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:var(--g2)}
+ol.mig-steps li::before{content:counter(s,decimal-leading-zero);font-size:13px;color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;padding-top:3px}
+ol.mig-steps b{font-weight:600}
+ul.mig-flags{list-style:none;padding:0;margin:var(--g3) 0 0;display:grid;gap:var(--g3) var(--g8)}
+@media (min-width:720px){ul.mig-flags{grid-template-columns:1fr 1fr}}
+ul.mig-flags li{display:grid;grid-template-columns:24px 1fr;gap:var(--g2);font-size:var(--fs-ui);color:var(--ink-2)}
+ul.mig-flags li::before{content:"";width:9px;height:9px;margin-top:7px;border-radius:2px;background:var(--bad);transform:rotate(45deg)}
+ul.mig-flags b{color:var(--ink);font-weight:600}
+
+/* details */
+.mig-faq{border-top:1px solid var(--line);max-inline-size:68ch;margin-top:var(--g5)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;font-weight:600;font-size:17px;padding:var(--g4) 0;display:grid;grid-template-columns:1fr 22px;gap:var(--g4);align-items:center;transition:color var(--t1) var(--ease)}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--accent)}
+summary .mig-pm{width:15px;height:15px;stroke:var(--ink-3);stroke-width:2;fill:none;transition:transform var(--t3) var(--spring),stroke var(--t1)}
+details[open] summary .mig-pm{transform:rotate(45deg);stroke:var(--accent)}
+.mig-body{padding-bottom:var(--g5);color:var(--ink-2);font-size:16px;line-height:1.62;max-inline-size:68ch}
+.mig-body p{margin-bottom:var(--g2)}
+
+/* care / cta / footer */
+.mig-care{border-top:1px solid var(--line-2);padding-top:var(--g8)}
+.mig-care h2{font-size:1.65rem;display:flex;align-items:center;gap:var(--g3)}
+.mig-age{font-family:var(--mig-text);font-size:var(--fs-micro);font-weight:700;border:1px solid var(--ink-2);border-radius:var(--rad1);padding:1px 7px;color:var(--ink-2)}
+.mig-cta{border-top:1px solid var(--line-2);padding-block:var(--g8);display:flex;flex-wrap:wrap;gap:var(--g4);align-items:center;justify-content:space-between;margin-top:var(--g8)}
+.mig-cta .t{font-family:var(--mig-display);font-weight:600;font-size:1.35rem;max-inline-size:40ch}
+.mig-btn{display:inline-flex;align-items:center;gap:8px;font:600 var(--fs-ui)/1 var(--mig-text);padding:13px 21px;border-radius:var(--rad2);background:var(--accent);color:var(--on-accent);text-decoration:none;white-space:nowrap;transition:background-color var(--t1) var(--ease),transform var(--t2) var(--spring)}
+.mig-btn:hover{background:var(--accent-fill);color:var(--on-accent)}
+.mig-btn:active{transform:scale(.98)}
+.mig-btn svg{width:17px;height:17px;fill:currentColor}
+footer{background:var(--surface-2);border-top:1px solid var(--line);padding-block:var(--g8);font-size:var(--fs-small);color:var(--ink-3);margin-top:var(--g10)}
+footer .mig-wide{display:grid;gap:var(--g5)}
+@media (min-width:720px){footer .mig-wide{grid-template-columns:1.3fr 1fr 1fr}}
+footer p{margin-bottom:var(--g2)}
+footer b{color:var(--ink-2);font-weight:600}
+@media (prefers-reduced-motion:reduce){*{transition-duration:1ms!important;animation-duration:1ms!important}html{scroll-behavior:auto}.mig-chip:active,.mig-btn:active{transform:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","@id":"https://mobilnoe-igry971.github.io/#page",
+ "headline":"Мобильные игры на телефоне в 2026 году: шесть ситуаций и как решить каждую",
+ "description":"Разбор шести случаев с мобильными играми: приложение пропало из магазина, запрос доступа к контактам и галерее, нагрев телефона, списание за внутриигровую покупку, сбой после обновления ОС и предложение установить APK из демо.",
+ "inLanguage":"ru","datePublished":"2026-10-01","dateModified":"2026-10-01",
+ "author":{"@type":"Organization","name":"Редакция «Экран под рукой»"},
+ "publisher":{"@type":"Organization","name":"Экран под рукой"},
+ "mainEntityOfPage":"https://mobilnoe-igry971.github.io/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","@id":"https://mobilnoe-igry971.github.io/#faq",
+ "mainEntity":[
+  {"@type":"Question","name":"Игра пропала из Google Play — её запретили лично мне?","acceptedAnswer":{"@type":"Answer","text":"Нет. Карточка исчезает для всех сразу по трём причинам: магазин снял приложение за нарушение политики о реальных азартных играх, издатель закрыл проект, или доступ ограничен по региону. В России онлайн-казино не лицензируется по 244-ФЗ, азартные сервисы в сторах долго не держатся. Уже установленная игра обычно продолжает работать, но обновлений и повторной загрузки не будет. Искать «тот самый» APK по ссылке из поиска опасно: под пропавшее название первыми выкладывают клоны."}},
+  {"@type":"Question","name":"Зачем простой игре доступ к контактам и SMS?","acceptedAnswer":{"@type":"Answer","text":"Игровому клиенту контакты, SMS и журнал звонков не нужны. Разрешение на SMS опаснее прочих: с ним приложение читает одноразовые коды подтверждения из банка и с самого сайта. Доступ к контактам — это сбор базы для рассылок и социальной инженерии. Выдайте минимум: уведомления по желанию, память только для кеша. Отозвать лишнее можно в настройках разрешений Android и в разделе конфиденциальности iOS; если без доступа к SMS или контактам приложение отказывается работать, это повод его удалить."}},
+  {"@type":"Question","name":"Телефон греется во время игры — это нормально?","acceptedAnswer":{"@type":"Answer","text":"Умеренный нагрев под нагрузкой графики обычен: процессор снижает частоты (троттлинг), и игра начинает подтормаживать. Тревожный признак — жар при свёрнутом приложении или на зарядке в простое: так ведут себя скрытый майнер и агрессивные рекламные SDK, которые крутят ролики в фоне. Откройте статистику батареи: если процент расхода у игры держится высоким без активного экрана, закройте её из списка задач и проверьте, не установился ли APK из стороннего источника. Нативная сборка греет меньше, чем видеостол с WebRTC-стримом."}},
+  {"@type":"Question","name":"Списали деньги за внутриигровую покупку — можно вернуть?","acceptedAnswer":{"@type":"Answer","text":"Часто да, если покупка прошла через биллинг магазина. В Google Play запрос на возврат подаётся из истории заказов; покупка моложе 48 часов нередко отменяется автоматически. В App Store возврат оформляется на reportaproblem.apple.com в течение 90 дней. Проверьте список подписок: автопродление платит молча, пока его не отключить. Если деньги ушли мимо магазина — прямым платежом на сайт за игровые монеты — возврат зависит только от правил самого сервиса, и шансов меньше. Поставьте пароль или биометрию на каждую покупку."}},
+  {"@type":"Question","name":"После обновления системы игра не открывается — что делать?","acceptedAnswer":{"@type":"Answer","text":"Пройдите по порядку. Обновите приложение в магазине: новая версия системы могла поднять требования к минимальному API. Очистите кеш приложения, не удаляя данные. Перезагрузите телефон. Если не помогло — переустановите. Когда приложение одновременно исчезло из магазина и перестало открываться после обновления ОС, его, скорее всего, забросили: 32-битные сборки и старые методы входа перестают работать на новой системе. Данные игрового счёта хранятся на стороне сервиса, а не в приложении, поэтому вход восстанавливается через браузер."}},
+  {"@type":"Question","name":"Демо-игра в браузере предлагает установить APK — соглашаться?","acceptedAnswer":{"@type":"Answer","text":"Нет. Честный демо-режим запускается в браузере и ничего не ставит на телефон. Кнопка «установить приложение» в бесплатной игре со стороннего сайта — типичный загрузчик: файл просит разрешение на установку из неизвестных источников, затем доступ к спецвозможностям или показу поверх других окон. Через это работают банковские оверлеи и перехват кодов. Если нужна именно программа, берите её из официального магазина; APK вне магазина ставьте только с домена самого оператора и сверяйте подпись и имя пакета."}},
+  {"@type":"Question","name":"Чем PWA-ярлык отличается от APK для игры на телефоне?","acceptedAnswer":{"@type":"Answer","text":"PWA — это сайт, добавленный на домашний экран: отдельный значок, полноэкранный режим, но работает в песочнице браузера и не получает доступ к SMS, контактам или памяти системно. APK — полноценная программа с собственными разрешениями и возможностью работать в фоне. Для разовой партии и демо хватает браузера или PWA. Нативная сборка нужна ради входа по отпечатку и push-уведомлений; за это она платит более широким доступом, который стоит проверять в настройках разрешений."}}
+ ]}
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-store" viewBox="0 0 24 24"><path d="M4 7h16l-1 4H5zM5 11v8h14v-8"/><path d="M15 15l4 4M19 15l-4 4"/></symbol>
+  <symbol id="ic-perm" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.3"/></symbol>
+  <symbol id="ic-heat" viewBox="0 0 24 24"><path d="M12 4v9"/><circle cx="12" cy="17" r="3"/><path d="M16 6c1.5 1 1.5 2.5 0 3.5M18.5 4c2.5 1.6 2.5 4.4 0 6"/></symbol>
+  <symbol id="ic-pay" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M7 15h3"/></symbol>
+  <symbol id="ic-os" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-1 5"/><path d="M20 5v5h-5"/></symbol>
+  <symbol id="ic-apk" viewBox="0 0 24 24"><path d="M12 3v10M8 10l4 4 4-4"/><path d="M5 17v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2"/><path d="M12 20.5v.01"/></symbol>
+  <symbol id="ic-brand" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="3" fill="var(--accent)" stroke="none"/><rect x="9" y="5" width="6" height="11" rx="1" fill="var(--on-accent)"/><circle cx="12" cy="18.6" r="1" fill="var(--on-accent)"/><path d="M10 8l1.6 1.6L14 7" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="mig-top" id="top">
+  <div class="mig-wide">
+    <a class="mig-brand" href="#top"><svg aria-hidden="true"><use href="#ic-brand"/></svg>Экран под рукой</a>
+    <div class="mig-rail">
+      <nav class="mig-nav" aria-label="Разделы">
+        <a href="#cases">Карта случаев</a><a href="#store">Магазин</a><a href="#access">Доступы</a><a href="#heat">Нагрев</a><a href="#pay">Списание</a><a href="#update">Обновление</a><a href="#apk">APK из демо</a><a href="#source">Источник</a>
+      </nav>
+      <button class="mig-theme" id="theme" type="button" aria-label="Сменить тему"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="mig-hero mig-hwrap">
+  <p class="mig-dateline mig-num">Обновлено 1 октября 2026 · Россия</p>
+  <h1>Мобильные игры на телефоне: шесть ситуаций и как решить каждую в 2026 году</h1>
+  <p class="mig-lead">Азартное приложение на смартфоне подводит не там, где его запускают, а в магазине программ, в разрешениях системы и в кассе. Этот разбор устроен как таблица случаев: для каждого — что он означает, как это проверить за минуту и какой шаг безопасен. Без рейтингов и рекламы сервисов; примеры общие и проверяемые.</p>
+
+  <div class="mig-callout">
+    <div class="mig-glyph"><svg aria-hidden="true"><use href="#ic-apk"/></svg></div>
+    <div>
+      <span class="mig-tag">Самый дорогой случай</span>
+      <h2>Демо зовёт поставить APK</h2>
+      <p>Бесплатная партия в браузере, которая требует скачать файл и разрешить установку из неизвестных источников, — классический загрузчик. Через него на телефон попадают банковские оверлеи и перехват кодов. Разбор ниже, раздел «APK из демо».</p>
+    </div>
+  </div>
+</section>
+
+<!-- 01 КАРТА СЛУЧАЕВ -->
+<section class="mig-sec div" id="cases">
+  <div class="mig-wide">
+    <div class="mig-head"><span class="mig-i mig-num">01</span><h2>Карта случаев: смысл, проверка и шаг по каждому</h2></div>
+    <p class="mig-sub">Шесть ситуаций, с которыми игрок на телефоне сталкивается чаще всего. Столбцы читаются слева направо: что произошло, что это значит на самом деле, как убедиться, и что сделать. Отфильтруйте по тому, что вас привело.</p>
+
+    <p class="mig-chiplab">Показать случаи:</p>
+    <div class="mig-chips" role="group" aria-label="Фильтр случаев">
+      <button class="mig-chip" data-filter="all" aria-pressed="true">Все <span class="c">6</span></button>
+      <button class="mig-chip" data-filter="money" aria-pressed="false">Деньги <span class="c">1</span></button>
+      <button class="mig-chip" data-filter="privacy" aria-pressed="false">Приватность <span class="c">2</span></button>
+      <button class="mig-chip" data-filter="hardware" aria-pressed="false">Железо <span class="c">1</span></button>
+      <button class="mig-chip" data-filter="access" aria-pressed="false">Доступ и вход <span class="c">2</span></button>
+      <button class="mig-chip" data-filter="security" aria-pressed="false">Безопасность <span class="c">3</span></button>
+    </div>
+    <p class="mig-count mig-num" id="caseCount" aria-live="polite"></p>
+
+    <div class="mig-tw lead">
+      <table class="mig-cases" id="caseTable">
+        <caption>Шесть типовых ситуаций с азартной игрой на смартфоне. Данные на 1 октября 2026; шаги общие, не привязаны к конкретному сервису.</caption>
+        <thead><tr>
+          <th>Ситуация</th><th>Что это значит</th><th>Как проверить</th><th>Что сделать</th><th>Риск</th>
+        </tr></thead>
+        <tbody>
+          <tr data-tags="access security">
+            <td><span class="mig-case-ttl"><svg aria-hidden="true"><use href="#ic-store"/></svg>Приложение пропало из магазина</span></td>
+            <td>Снято по политике о реальных азартных играх, закрыто издателем или скрыто по региону (244-ФЗ).</td>
+            <td>Открыть сайт оператора напрямую и сверить издателя; проверить, работает ли уже установленная версия.</td>
+            <td class="mig-do">Играть в браузере, не искать «тот самый» файл по ссылкам из поиска.</td>
+            <td><span class="mig-risk md">средний: клоны</span></td>
+          </tr>
+          <tr data-tags="privacy security">
+            <td><span class="mig-case-ttl"><svg aria-hidden="true"><use href="#ic-perm"/></svg>Просит доступ к контактам и галерее</span></td>
+            <td>Игре эти данные не нужны; запрос SMS открывает чтение одноразовых кодов.</td>
+            <td>Настройки → Разрешения (Android) или Конфиденциальность (iOS): посмотреть выданное.</td>
+            <td class="mig-do">Отозвать лишнее; при отказе работать без SMS и контактов — удалить.</td>
+            <td><span class="mig-risk hi">высокий: перехват кодов</span></td>
+          </tr>
+          <tr data-tags="hardware">
+            <td><span class="mig-case-ttl"><svg aria-hidden="true"><use href="#ic-heat"/></svg>Телефон греется и тормозит</span></td>
+            <td>Троттлинг под графикой — обычен; жар в простое — скрытый майнер или фоновая реклама.</td>
+            <td>Статистика батареи: расход у приложения при погашенном экране.</td>
+            <td class="mig-do">Закрыть из задач; удалить сборку, которая греет в фоне.</td>
+            <td><span class="mig-risk md">средний: износ, майнер</span></td>
+          </tr>
+          <tr data-tags="money">
+            <td><span class="mig-case-ttl"><svg aria-hidden="true"><use href="#ic-pay"/></svg>Списали за внутриигровую покупку</span></td>
+            <td>Покупка пакета монет или автопродление подписки через биллинг магазина.</td>
+            <td>История заказов Google Play / App Store; список активных подписок.</td>
+            <td class="mig-do">Запросить возврат (Play — до 48 ч, Apple — 90 дней); включить пароль на покупки.</td>
+            <td><span class="mig-risk md">средний: подписка-ловушка</span></td>
+          </tr>
+          <tr data-tags="access">
+            <td><span class="mig-case-ttl"><svg aria-hidden="true"><use href="#ic-os"/></svg>Не входит после обновления ОС</span></td>
+            <td>Новая система подняла минимальный API или отключила старый метод входа.</td>
+            <td>Есть ли свежая версия в магазине; помогает ли очистка кеша.</td>
+            <td class="mig-do">Обновить → очистить кеш → переустановить; войти через браузер.</td>
+            <td><span class="mig-risk lo">низкий: счёт на сервере</span></td>
+          </tr>
+          <tr data-tags="security privacy">
+            <td><span class="mig-case-ttl"><svg aria-hidden="true"><use href="#ic-apk"/></svg>Демо предлагает установить APK</span></td>
+            <td>Загрузчик: просит установку из неизвестных источников и спецвозможности.</td>
+            <td>Сверить подпись файла, имя пакета и домен загрузки с оператором.</td>
+            <td class="mig-do">Отказаться; демо должно идти в браузере без установки.</td>
+            <td><span class="mig-risk hi">высокий: троян, оверлей</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mig-small mig-faint" style="margin-top:var(--g3)">Разбор каждой строки — в разделах ниже с тем же номером случая. «Риск» в последнем столбце — оценка возможных последствий, а не вероятности: высокий означает прямую угрозу деньгам или счёту.</p>
+  </div>
+</section>
+
+<!-- 02 МАГАЗИН -->
+<section class="mig-sec" id="store">
+  <div class="mig-wrap">
+    <div class="mig-head"><span class="mig-i mig-num">02</span><h2>Приложение исчезло из Google Play и App Store: 244-ФЗ, политика магазина и клоны</h2></div>
+    <p class="mig-ans">Карточка пропадает для всех пользователей одновременно, а не лично для вас. Причин три: магазин снял сборку за нарушение правил о реальных азартных сервисах, издатель закрыл проект, доступ ограничили по региону. В России онлайн-казино не лицензируется — по 244-ФЗ легальны только наземные игорные зоны, — поэтому азартные приложения в официальных сторах держатся недолго. Уже установленная программа обычно работает дальше, но обновлений и повторной загрузки не будет.</p>
+    <div class="mig-prose">
+      <p>Google Play запрещает публикацию приложений со ставками на реальные деньги в странах, где у издателя нет местной лицензии; для России такой лицензии на онлайн-формат не существует. App Store идёт тем же путём и дополнительно требует, чтобы азартные приложения распространялись как нативные, а не как обёртка над сайтом. Когда сервис нарушает любое из условий, модерация снимает карточку, и в выдаче магазина остаётся пустая ссылка или «приложение недоступно в вашем регионе».</p>
+      <p>Отдельно работает Роскомнадзор: домен офшорного оператора попадает в реестр запрещённых сайтов, и это тоже обрывает доступ — но к сайту, а не к магазину. Блокировка домена и снятие приложения из стора — разные события с разными последствиями. Сам факт блокировки не говорит ни о честности сервиса, ни об обмане; это следствие того, что деятельность не укладывается в российское регулирование.</p>
+      <p>Главная опасность момента — подмена. Как только популярное название исчезает, под него в поиске и в сторонних каталогах выкладывают клоны: та же иконка, похожее имя пакета, внутри — загрузчик или фишинговая форма входа. Человек ищет «куда пропал сервис», находит «рабочую версию» и ставит чужую программу. Поэтому единственный надёжный путь к оператору после пропажи из магазина — набрать его домен вручную и открыть в браузере, а не скачивать файл по первой ссылке. Если домен тоже недоступен, разумнее остановиться, чем искать обход: деньги на счёте, к которому нет легального доступа, забрать будет нечем.</p>
+      <p>Проверить издателя просто: на странице магазина (пока она ещё в кеше поиска или в истории загрузок) указано юридическое имя разработчика. Оно должно совпадать с оператором на сайте. Расхождение имени пакета — например, добавленная буква или цифра в конце — первый признак клона, собранного под чужой трафик.</p>
+      <p>Полезно отличать два похожих сообщения магазина. «Недоступно в вашем регионе» означает географический фильтр: сервис существует, но закрыт для текущей страны и может вернуться при смене политики. «Приложение больше не доступно» без упоминания региона — это снятие или закрытие карточки насовсем, и ждать возврата смысла нет. Текст сообщения стоит прочитать дословно, потому что от него зависит, есть ли вообще шанс на повторную загрузку из официального источника. Снимок экрана с этой формулировкой пригодится и для обращения в поддержку, если на счёте остались средства.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 ДОСТУПЫ -->
+<section class="mig-sec div" id="access">
+  <div class="mig-wrap">
+    <div class="mig-head"><span class="mig-i mig-num">03</span><h2>Запрос доступа к контактам, SMS и галерее: какие разрешения уместны</h2></div>
+    <p class="mig-ans">Клиенту сервиса не нужны ни контакты, ни журнал звонков, ни чтение SMS, ни полная галерея. Уместный минимум — уведомления (по желанию) и доступ к памяти только для кеша и сохранения скриншота, причём на Android с версии 10–11 действует scoped storage, и приложение видит свою папку без доступа ко всем файлам. Разрешение на SMS опаснее остальных: с ним программа читает одноразовые коды из банка и с самого сервиса, то есть получает ключ ко входу и к подтверждению платежа.</p>
+
+    <div class="mig-tw">
+      <table class="mig-data"><caption>Разрешения, которые запрашивают приложения, и уместность для игрового клиента</caption>
+        <thead><tr><th>Разрешение</th><th>Зачем бывает нужно</th><th>Вердикт для игры</th></tr></thead>
+        <tbody>
+          <tr><td>Уведомления</td><td>турниры, статус вывода</td><td><span class="mig-risk lo">уместно, по желанию</span></td></tr>
+          <tr><td>Память (scoped)</td><td>кеш, скриншот</td><td><span class="mig-risk lo">уместно</span></td></tr>
+          <tr><td>Камера</td><td>селфи для KYC</td><td><span class="mig-risk md">только в момент проверки</span></td></tr>
+          <tr><td>Контакты</td><td>—</td><td><span class="mig-risk hi">отказать</span></td></tr>
+          <tr><td>SMS</td><td>—</td><td><span class="mig-risk hi">отказать: чтение кодов</span></td></tr>
+          <tr><td>Спецвозможности</td><td>—</td><td><span class="mig-risk hi">отказать: оверлей</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mig-prose" style="margin-top:var(--g5)">
+      <p>Доступ к контактам нужен приложению не для партии, а для сбора базы: номера и имена уходят на сервер и превращаются в материал для рассылок и социальной инженерии. Запрос спецвозможностей (accessibility service) стоит в одном ряду с SMS по опасности: эта служба создана для незрячих и умеет читать содержимое чужих окон и нажимать кнопки за пользователя. Легальному клиенту она не требуется, а вредоносу даёт готовый механизм оверлея — рисования поддельной формы поверх банковского приложения.</p>
+      <p>Проверить и исправить выданное можно за минуту. На Android: Настройки → Приложения → нужное → Разрешения, там же отдельный пункт «показ поверх других окон» и «спецвозможности». На iPhone: Настройки → Конфиденциальность и безопасность, где каждое разрешение сгруппировано по типу данных, плюс переключатель «Разрешить отслеживание». Снимайте всё, что не объясняется работой приложения. Если после отзыва SMS или контактов программа отказывается запускаться, это не техническое требование, а условие сбора данных — такую сборку лучше удалить.</p>
+      <p>Полезно понимать, как разрешение запрашивают. Система показывает окно в момент, когда функция впервые нужна, — честный клиент просит камеру ровно тогда, когда открывает экран проверки личности. Если доступ к контактам или SMS запрашивается на самом старте, до единой ставки и до кассы, это сбор данных про запас, а не техническая необходимость. На Android можно выдать доступ «только во время использования» и отозвать позже; iOS хранит журнал обращений к геопозиции и камере, по которому видно, что именно и когда приложение трогало.</p>
+      <p>Отдельный случай — «социальные казино» и приложения с виртуальными фишками: формально они не про реальные деньги, поэтому проходят модерацию магазина, но данные собирают так же жадно. Разрешения у них стоит урезать по тому же правилу: приложение должно работать, зная о телефоне только то, что показано на экране.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 НАГРЕВ -->
+<section class="mig-sec" id="heat">
+  <div class="mig-wrap">
+    <div class="mig-head"><span class="mig-i mig-num">04</span><h2>Телефон греется и тормозит: троттлинг, рекламные SDK и скрытый майнинг</h2></div>
+    <p class="mig-ans">Умеренный нагрев под графикой нормален: при перегреве процессор снижает частоты (троттлинг), кадры проседают, приложение подтормаживает. Тревожно, когда телефон горячий при свёрнутой программе или заряжается и греется в простое — так ведут себя скрытый майнер и агрессивные рекламные SDK, крутящие видео в фоне. Разница видна в статистике батареи: у честной сборки расход падает вместе с погасшим экраном, у фоновой нагрузки держится высоким всё время.</p>
+
+    <figure class="mig-viz" id="fig-heat">
+      <svg width="100%" height="258" role="img" aria-labelledby="fh-t fh-d">
+        <title id="fh-t">Расход батареи по типам нагрузки за час активной игры</title>
+        <desc id="fh-d">Слот в браузере около 9 процентов в час, нативная сборка 7, видеостол WebRTC 20, фоновая реклама 14, скрытый майнер 32 процента.</desc>
+        <g stroke="var(--line-2)" stroke-width="1"><line x1="0" y1="6" x2="0" y2="214"/><line x1="28%" y1="6" x2="28%" y2="214"/><line x1="56%" y1="6" x2="56%" y2="214"/><line x1="84%" y1="6" x2="84%" y2="214"/></g>
+        <g font-size="12" fill="var(--ink-3)" class="mig-num" text-anchor="middle"><text x="0" y="232" text-anchor="start">0 %</text><text x="28%" y="232">10 %</text><text x="56%" y="232">20 %</text><text x="84%" y="232">30 %</text></g>
+        <g font-size="13" font-weight="600" fill="var(--ink-2)"><text x="0" y="22">Слот в браузере (WebGL)</text><text x="0" y="62">Нативная сборка</text><text x="0" y="102">Видеостол (WebRTC-стрим)</text><text x="0" y="142">Фоновая реклама (SDK)</text><text x="0" y="182">Скрытый майнер</text></g>
+        <g>
+          <rect x="0" y="28" width="25.2%" height="15" rx="4" fill="var(--b1)"/>
+          <rect x="0" y="68" width="19.6%" height="15" rx="4" fill="var(--b2)"/>
+          <rect x="0" y="108" width="56%" height="15" rx="4" fill="var(--b5)"/>
+          <rect x="0" y="148" width="39.2%" height="15" rx="4" fill="var(--b4)"/>
+          <rect x="0" y="188" width="89.6%" height="15" rx="4" fill="var(--bad)"/>
+        </g>
+        <g font-size="12" fill="var(--ink-3)" class="mig-num"><text x="26%" y="40">9 %/ч</text><text x="20.4%" y="80">7 %/ч</text><text x="56.8%" y="120">20 %/ч</text><text x="40%" y="160">14 %/ч</text><text x="90.4%" y="200" fill="var(--bad)">32 %/ч ✕</text></g>
+      </svg>
+      <div class="mig-legend"><span><i style="background:var(--b1)"></i>штатная игра</span><span><i style="background:var(--b5)"></i>объяснимо высокий стрим</span><span><i style="background:var(--bad)"></i>аномалия, проверять</span></div>
+      <figcaption>Расчётные ориентиры для телефона среднего класса с экраном 6,5″; абсолютные цифры зависят от модели и яркости. Главное — не само число, а держится ли расход при погашенном экране.</figcaption>
+      <div class="mig-tw"><table class="mig-data"><caption>Те же значения таблицей</caption>
+        <thead><tr><th>Нагрузка</th><th class="r">Расход/ч</th><th>В фоне</th><th>Нагрев</th></tr></thead>
+        <tbody class="mig-num">
+          <tr><td>Слот в браузере (WebGL)</td><td class="r">≈ 9 %</td><td>падает</td><td>умеренный</td></tr>
+          <tr><td>Нативная сборка</td><td class="r">≈ 7 %</td><td>падает</td><td>низкий</td></tr>
+          <tr><td>Видеостол (WebRTC)</td><td class="r">≈ 20 %</td><td>падает</td><td>высокий, объяснимый</td></tr>
+          <tr><td>Фоновая реклама (SDK)</td><td class="r">≈ 14 %</td><td>держится</td><td>высокий в простое</td></tr>
+          <tr><td>Скрытый майнер</td><td class="r">≈ 32 %</td><td>держится</td><td>жар на зарядке</td></tr>
+        </tbody></table></div>
+    </figure>
+
+    <div class="mig-prose">
+      <p>Видеостол с живым дилером тратит заметно больше остальных форматов честно: это непрерывный WebRTC-стрим, 1–2 ГБ трафика в час и постоянная работа декодера. Такой нагрев объясним и проходит, как только стол закрыт. Слоты на HTML5 и нативные сборки нагружают телефон короткими всплесками на анимации и между ними остывают. Если же расход и температура не спадают после выхода из приложения, причина — фоновый процесс.</p>
+      <p>Скрытый майнер попадает на телефон чаще всего вместе с APK из неофициального источника — поэтому нагрев в простое и недавняя установка файла «мимо магазина» встречаются вместе. Он грузит процессор под посторонние задачи и сильнее всего греется на зарядке, когда система не ограничивает питание. Диагностика одна: статистика батареи и расхода за сутки покажет приложение, которое тратит ресурс без активного экрана. Такую сборку удаляют, а на Android дополнительно запускают проверку Play Protect.</p>
+      <p>Нагрев бьёт не только по комфорту. Постоянная работа у верхней границы температуры ускоряет деградацию аккумулятора, а троттлинг во время сессии превращается в проблему там, где секунды решают: на видеостоле окно ставок закрывается по таймеру, и зависший на перегреве телефон способен не принять ставку до команды No More Bets. Поэтому долгую сессию на смартфоне лучше вести без чехла, с автояркостью и закрытыми фоновыми вкладками — это снижает и температуру, и расход заряда.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 СПИСАНИЕ -->
+<section class="mig-sec div" id="pay">
+  <div class="mig-wrap">
+    <div class="mig-head"><span class="mig-i mig-num">05</span><h2>Списание за внутриигровую покупку: биллинг магазина, подписки и возврат</h2></div>
+    <p class="mig-ans">Если покупка прошла через биллинг магазина, деньги часто удаётся вернуть. В Google Play возврат запрашивается из истории заказов, и покупка моложе 48 часов нередко отменяется сразу. В App Store заявка подаётся на reportaproblem.apple.com в течение 90 дней. Проверьте список подписок отдельно: автопродление списывает тихо, пока его не отключить. Платёж, ушедший мимо магазина — напрямую на сайт за пакет внутренних монет, — возвращается только по правилам сервиса, и шансов там меньше.</p>
+
+    <figure class="mig-viz" id="fig-refund">
+      <svg width="100%" height="212" role="img" aria-labelledby="fr-t fr-d">
+        <title id="fr-t">Окно возврата средств по каналам оплаты</title>
+        <desc id="fr-d">Автовозврат Google Play до 2 часов, запрос в Google Play около 48 часов, App Store до 90 дней, прямой платёж на сайт — по правилам сервиса.</desc>
+        <g stroke="var(--line-2)" stroke-width="1"><line x1="0" y1="6" x2="0" y2="150"/><line x1="33.3%" y1="6" x2="33.3%" y2="150"/><line x1="66.6%" y1="6" x2="66.6%" y2="150"/><line x1="100%" y1="6" x2="100%" y2="150"/></g>
+        <g font-size="12" fill="var(--ink-3)" class="mig-num"><text x="0" y="168">2 ч</text><text x="33.3%" y="168" text-anchor="middle">48 ч</text><text x="66.6%" y="168" text-anchor="middle">14 дней</text><text x="100%" y="168" text-anchor="end">90 дней</text></g>
+        <g font-size="13" font-weight="600" fill="var(--ink-2)"><text x="0" y="22">Google Play, автоотмена</text><text x="0" y="62">Google Play, по запросу</text><text x="0" y="102">App Store, report a problem</text><text x="0" y="142">Прямой платёж на сайт</text></g>
+        <g>
+          <rect x="0" y="28" width="6%" height="14" rx="4" fill="var(--b2)"/>
+          <rect x="0" y="68" width="33.3%" height="14" rx="4" fill="var(--b1)"/>
+          <rect x="0" y="108" width="100%" height="14" rx="4" fill="var(--b3)"/>
+          <rect x="0" y="148" width="22%" height="14" rx="4" fill="var(--bar-muted)"/>
+        </g>
+        <g font-size="12" fill="var(--ink-3)" class="mig-num"><text x="7%" y="39">до 2 ч</text><text x="34.5%" y="79">≈ 48 ч</text><text x="86%" y="119" fill="var(--on-accent)" style="fill:var(--ink)">до 90 дней</text><text x="23.5%" y="159">по правилам</text></g>
+      </svg>
+      <figcaption>Сроки — предельные окна подачи заявки, а не гарантия возврата: решение принимает магазин или оператор. Шкала линейная, 0–90 дней.</figcaption>
+      <div class="mig-tw"><table class="mig-data"><caption>Те же значения таблицей</caption>
+        <thead><tr><th>Канал</th><th class="r">Окно заявки</th><th>Где оформить</th></tr></thead>
+        <tbody class="mig-num">
+          <tr><td>Google Play, автоотмена</td><td class="r">до 2 ч</td><td>история заказов</td></tr>
+          <tr><td>Google Play, по запросу</td><td class="r">≈ 48 ч</td><td>«Сообщить о проблеме»</td></tr>
+          <tr><td>App Store</td><td class="r">до 90 дней</td><td>reportaproblem.apple.com</td></tr>
+          <tr><td>Прямой платёж на сайт</td><td class="r">по правилам</td><td>поддержка оператора</td></tr>
+        </tbody></table></div>
+    </figure>
+
+    <div class="mig-prose">
+      <p>Три частых сценария списания различаются по тому, куда ушли деньги. Первый — случайная или детская покупка пакета фишек: она проходит через магазин, и её отменяют быстрее всего, особенно в первые часы. Второй — подписка на «VIP-статус» или «ежедневный бонус» с автопродлением: платёж повторяется каждый период, и останавливает его только отключение подписки в настройках аккаунта магазина, а не удаление приложения. Третий — прямое пополнение счёта на сайте за внутренние монеты: это уже не покупка в магазине, а перевод оператору, и возврат зависит от его регламента.</p>
+      <p>Чтобы списания не повторялись, включите подтверждение каждой покупки паролем или биометрией: в Google Play это «Аутентификация для покупок» с вариантом «Для всех покупок», в App Store — Face ID или Touch ID на App Store и встроенные покупки. Для телефона, которым пользуется ребёнок, добавьте семейный доступ с запросом на подтверждение. Отдельно стоит помнить про «монеты» и «гемы»: реальные деньги за них платят вперёд, а обратно виртуальная валюта по правилам большинства сервисов не конвертируется.</p>
+      <p>Заявку на возврат читают внимательнее, когда в ней есть конкретика. Укажите дату и время, сумму, название позиции из чека и причину: случайное нажатие, покупка ребёнком, неработающая функция, незамеченное автопродление. Чек приходит на почту аккаунта магазина — это первичный документ для спора. Если списание повторяется каждый месяц, сначала отмените подписку, иначе возврат за один период не остановит следующий. При платеже прямой картой на сайт оператора поможет выписка банка с суммой и датой: без неё поддержка сервиса отвечает медленнее, а шанс вернуть перевод за внутреннюю валюту и без того невелик.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 ОБНОВЛЕНИЕ -->
+<section class="mig-sec" id="update">
+  <div class="mig-wrap">
+    <div class="mig-head"><span class="mig-i mig-num">06</span><h2>Не запускается после обновления ОС: минимальный API, кеш и сертификаты</h2></div>
+    <p class="mig-ans">Новая версия системы меняет правила под приложением: поднимает минимальный API, отключает 32-битные сборки, обновляет набор корневых сертификатов и ужесточает фоновые ограничения. Старый клиент, который давно не обновляли, на этом ломается. Данные счёта хранятся на сервере оператора, а не внутри приложения, поэтому вход никуда не пропадает — его восстанавливают через браузер, даже если программа больше не открывается.</p>
+    <div class="mig-prose">
+      <p>Порядок действий короткий и идёт от простого к сложному. Сначала обновите приложение в магазине: разработчик мог выпустить версию под новую систему. Затем очистите кеш приложения — это стирает временные файлы, но сохраняет вход и настройки; на Android это Настройки → Приложения → нужное → Хранилище → «Очистить кеш». Перезагрузите телефон. Если не помогло, удалите и поставьте заново из магазина. На каждом шаге стоит проверять, не появилось ли сообщение «приложение устарело» или «несовместимо с этой версией Android».</p>
+      <p>Отдельный симптом — ошибка защищённого соединения сразу после обновления. Она возникает, когда приложение жёстко привязано к конкретному сертификату (certificate pinning), а система обновила хранилище центров сертификации; лечится это только новой версией от разработчика. Если приложение не обновлялось год и больше, а сервис перешёл на свежий протокол, старый клиент перестаёт проходить рукопожатие.</p>
+      <p>Худший вариант — когда приложение одновременно исчезло из магазина и перестало открываться после обновления ОС. Это почти всегда заброшенный проект: обновлять некому, совместимой сборки не будет. В такой ситуации вход через браузер на домене оператора остаётся единственным способом добраться до счёта и вывести остаток, и делать это стоит раньше, чем домен попадёт под блокировку. Прежде чем вводить логин, сверьте адрес символ в символ: на сбоях входа паразитируют фишинговые копии.</p>
+      <p>Два профилактических приёма снимают большую часть таких сбоев заранее. Первый — не ставить автообновление системы на ночь, если на счёте лежит заметная сумма: крупные версии ОС лучше ставить тогда, когда есть время сразу проверить вход и при необходимости переустановить клиент. Второй — держать под рукой адрес веб-версии и привязать к аккаунту резервный способ входа: почту или приложение-аутентификатор вместо кода по SMS. Тогда сломанная после обновления сборка остаётся неудобством, а не потерей доступа к деньгам.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 APK ИЗ ДЕМО -->
+<section class="mig-sec div" id="apk">
+  <div class="mig-wrap">
+    <div class="mig-head"><span class="mig-i mig-num">07</span><h2>Демо в браузере зовёт установить APK: сайдлоад, дропперы и оверлей</h2></div>
+    <p class="mig-ans">Честный демо-режим запускается в браузере и ничего не ставит на телефон. Кнопка «установить приложение» в бесплатной партии со стороннего сайта — типичный дроппер: файл просит разрешить установку из неизвестных источников, а после запуска — доступ к спецвозможностям или показу поверх других окон. Через эту связку работают банковские оверлеи и перехват одноразовых кодов. Соглашаться нельзя: демо не требует установки, а настоящий клиент берётся из официального магазина.</p>
+    <div class="mig-prose">
+      <p>Сайдлоад — установка APK в обход магазина — сам по себе легальная возможность Android, и ею пользуются честные разработчики, которых не пускают в Google Play. Проблема не в способе, а в источнике и в том, что просят после установки. Безопасный сайдлоад выглядит так: файл скачан с домена самого оператора (не с файлообменника и не из мессенджера), у него проверяемая подпись и ожидаемое имя пакета, а при первом запуске он не требует спецвозможностей и чтения SMS. Любое отклонение — повод удалить файл, не открывая.</p>
+      <p>Дроппер отличается сценарием. Сначала он ставит безобидную с виду оболочку, которая проходит первичную проверку. Затем просит включить «спецвозможности», объясняя это удобством, и уже с их помощью догружает основной вредоносный модуль и рисует поддельные окна поверх банковских приложений. Отсюда правило: запрос accessibility service от развлекательного приложения — стоп-сигнал, даже если файл выглядел нормально. На свежих версиях Android установку из неизвестных источников система разрешает отдельно для каждого приложения-источника, и этот запрос — последняя точка, где процесс легко прервать.</p>
+      <p>Понять замысел помогает простой вопрос: зачем бесплатной демонстрации вообще установка. Браузерная версия на HTML5 показывает механику и тайтлы без единого скачивания; если сайт настойчиво уводит из браузера в файл, установка и есть его настоящая цель, а партия — приманка. Насторожить должны и сопутствующие приёмы: обратный отсчёт «предложение сгорит через пять минут», требование отключить защиту перед загрузкой, обещание особого бонуса только в «приложении из нашего файла». Ни один из них не относится к самой партии и служит давлением, под которым пользователь пропускает системные предупреждения.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 ИСТОЧНИК -->
+<section class="mig-sec" id="source">
+  <div class="mig-wrap">
+    <div class="mig-head"><span class="mig-i mig-num">08</span><h2>Как проверить источник приложения: подпись, имя пакета и домен</h2></div>
+    <p class="mig-ans">Когда программу всё же ставят вне магазина, её надёжность определяют три сверки: домен загрузки, имя пакета и цифровая подпись. Магазин делает это автоматически, при сайдлоаде — вручную. Подпись APK по схеме v2/v3 — это SHA-256-отпечаток ключа разработчика; у настоящих обновлений он не меняется. Имя пакета вроде com.operator.app должно совпадать с тем, что заявляет оператор, а файл — скачиваться с его собственного домена.</p>
+
+    <figure class="mig-viz" id="fig-source">
+      <svg viewBox="0 0 640 158" role="img" aria-labelledby="fs-t fs-d" style="max-width:640px">
+        <title id="fs-t">Четыре сверки перед установкой приложения вне магазина</title>
+        <desc id="fs-d">Домен оператора, имя пакета, отпечаток подписи, разрешения при первом запуске; расхождение на любом шаге — не устанавливать.</desc>
+        <defs><marker id="mig-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--ink-3)"/></marker></defs>
+        <g font-family="Inter,Segoe UI,sans-serif">
+          <g><rect x="2" y="16" width="150" height="66" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><circle cx="22" cy="36" r="11" fill="var(--accent)"/><text x="22" y="40.5" font-size="12" font-weight="700" text-anchor="middle" fill="var(--on-accent)">1</text><text x="40" y="40" font-size="12" font-weight="600" fill="var(--ink)">Домен</text><text x="16" y="60" font-size="11" fill="var(--ink-2)">файл — с сайта</text><text x="16" y="74" font-size="11" fill="var(--ink-2)">оператора</text></g>
+          <path d="M154 49h12" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#mig-ar)"/>
+          <g><rect x="170" y="16" width="150" height="66" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><circle cx="190" cy="36" r="11" fill="var(--accent)"/><text x="190" y="40.5" font-size="12" font-weight="700" text-anchor="middle" fill="var(--on-accent)">2</text><text x="208" y="40" font-size="12" font-weight="600" fill="var(--ink)">Имя пакета</text><text x="184" y="60" font-size="11" fill="var(--ink-2)">com.operator.app</text><text x="184" y="74" font-size="11" fill="var(--ink-2)">без лишних знаков</text></g>
+          <path d="M322 49h12" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#mig-ar)"/>
+          <g><rect x="338" y="16" width="150" height="66" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><circle cx="358" cy="36" r="11" fill="var(--accent)"/><text x="358" y="40.5" font-size="12" font-weight="700" text-anchor="middle" fill="var(--on-accent)">3</text><text x="376" y="40" font-size="12" font-weight="600" fill="var(--ink)">Подпись</text><text x="352" y="60" font-size="11" fill="var(--ink-2)">SHA-256 v2/v3,</text><text x="352" y="74" font-size="11" fill="var(--ink-2)">не менялась</text></g>
+          <path d="M490 49h12" stroke="var(--ink-3)" stroke-width="1.5" marker-end="url(#mig-ar)"/>
+          <g><rect x="506" y="16" width="132" height="66" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><circle cx="526" cy="36" r="11" fill="var(--accent)"/><text x="526" y="40.5" font-size="12" font-weight="700" text-anchor="middle" fill="var(--on-accent)">4</text><text x="544" y="40" font-size="12" font-weight="600" fill="var(--ink)">Запуск</text><text x="520" y="60" font-size="11" fill="var(--ink-2)">нет спецвозм.</text><text x="520" y="74" font-size="11" fill="var(--ink-2)">и чтения SMS</text></g>
+          <rect x="2" y="104" width="310" height="42" rx="8" fill="var(--good-soft)" stroke="var(--good)"/><text x="16" y="130" font-size="12" font-weight="600" fill="var(--good)">✓ Все четыре сошлись — можно ставить</text>
+          <rect x="328" y="104" width="310" height="42" rx="8" fill="var(--bad-soft)" stroke="var(--bad)"/><text x="342" y="130" font-size="12" font-weight="600" fill="var(--bad)">✕ Разошлось на любом шаге — удалить файл</text>
+        </g>
+      </svg>
+      <figcaption>Схема для редкого случая, когда установка вне магазина оправдана. В обычной ситуации достаточно официального магазина, где эти сверки выполняются за вас.</figcaption>
+      <div class="mig-tw"><table class="mig-data"><caption>Те же четыре сверки таблицей</caption>
+        <thead><tr><th>Шаг</th><th>Что сверить</th><th>Где посмотреть</th></tr></thead>
+        <tbody>
+          <tr><td>1. Домен</td><td>файл с сайта оператора</td><td>адресная строка браузера</td></tr>
+          <tr><td>2. Имя пакета</td><td>com.operator.app без лишних знаков</td><td>карточка файла, диспетчер приложений</td></tr>
+          <tr><td>3. Подпись</td><td>SHA-256-отпечаток не менялся</td><td>свойства APK, Play Protect</td></tr>
+          <tr><td>4. Первый запуск</td><td>нет спецвозможностей и SMS</td><td>системный запрос разрешений</td></tr>
+        </tbody></table></div>
+    </figure>
+
+    <h3>На чём срезаются поддельные сборки</h3>
+    <ul class="mig-flags">
+      <li><span><b>Имя пакета с лишним символом.</b> Добавленная буква или цифра в конце — клон под чужой трафик.</span></li>
+      <li><span><b>Файл из мессенджера или с файлообменника.</b> Легальная сборка лежит на домене оператора.</span></li>
+      <li><span><b>Запрос спецвозможностей при старте.</b> Игре служба для незрячих не нужна — это механизм оверлея.</span></li>
+      <li><span><b>Подпись не совпадает с прежней.</b> Обновление с другим ключом система ставить не даст — его подсовывают переустановкой.</span></li>
+      <li><span><b>Просит отключить Play Protect.</b> Честной программе проверка не мешает.</span></li>
+      <li><span><b>Иконка известной игры, но другой разработчик.</b> Сверяйте юрлицо издателя, а не картинку.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 09 FAQ -->
+<section class="mig-sec div" id="faq">
+  <div class="mig-wrap">
+    <div class="mig-head"><span class="mig-i mig-num">09</span><h2>Что ещё спрашивают про игры на телефоне</h2></div>
+    <div class="mig-faq" style="max-inline-size:none;border-top:0">
+      <details id="q-store"><summary><span>Игра пропала из Google Play — её запретили лично мне?</span><svg class="mig-pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="mig-body"><p>Нет. Карточка исчезает для всех сразу по трём причинам: магазин снял приложение за нарушение политики о реальных азартных играх, издатель закрыл проект, или доступ ограничен по региону. В России онлайн-казино не лицензируется по 244-ФЗ, азартные сервисы в сторах долго не держатся. Уже установленная игра обычно продолжает работать, но обновлений и повторной загрузки не будет. Искать «тот самый» APK по ссылке из поиска опасно: под пропавшее название первыми выкладывают клоны.</p></div></details>
+      <details id="q-perm"><summary><span>Зачем простой игре доступ к контактам и SMS?</span><svg class="mig-pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="mig-body"><p>Игровому клиенту контакты, SMS и журнал звонков не нужны. Разрешение на SMS опаснее прочих: с ним приложение читает одноразовые коды подтверждения из банка и с самого сайта. Доступ к контактам — это сбор базы для рассылок и социальной инженерии. Выдайте минимум: уведомления по желанию, память только для кеша. Отозвать лишнее можно в настройках разрешений Android и в разделе конфиденциальности iOS; если без доступа к SMS или контактам приложение отказывается работать, это повод его удалить.</p></div></details>
+      <details id="q-heat"><summary><span>Телефон греется во время игры — это нормально?</span><svg class="mig-pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="mig-body"><p>Умеренный нагрев под нагрузкой графики обычен: процессор снижает частоты (троттлинг), и игра начинает подтормаживать. Тревожный признак — жар при свёрнутом приложении или на зарядке в простое: так ведут себя скрытый майнер и агрессивные рекламные SDK, которые крутят ролики в фоне. Откройте статистику батареи: если процент расхода у игры держится высоким без активного экрана, закройте её из списка задач и проверьте, не установился ли APK из стороннего источника. Нативная сборка греет меньше, чем видеостол с WebRTC-стримом.</p></div></details>
+      <details id="q-pay"><summary><span>Списали деньги за внутриигровую покупку — можно вернуть?</span><svg class="mig-pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="mig-body"><p>Часто да, если покупка прошла через биллинг магазина. В Google Play запрос на возврат подаётся из истории заказов; покупка моложе 48 часов нередко отменяется автоматически. В App Store возврат оформляется на reportaproblem.apple.com в течение 90 дней. Проверьте список подписок: автопродление платит молча, пока его не отключить. Если деньги ушли мимо магазина — прямым платежом на сайт за игровые монеты — возврат зависит только от правил самого сервиса, и шансов меньше. Поставьте пароль или биометрию на каждую покупку.</p></div></details>
+      <details id="q-update"><summary><span>После обновления системы игра не открывается — что делать?</span><svg class="mig-pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="mig-body"><p>Пройдите по порядку. Обновите приложение в магазине: новая версия системы могла поднять требования к минимальному API. Очистите кеш приложения, не удаляя данные. Перезагрузите телефон. Если не помогло — переустановите. Когда приложение одновременно исчезло из магазина и перестало открываться после обновления ОС, его, скорее всего, забросили: 32-битные сборки и старые методы входа перестают работать на новой системе. Данные игрового счёта хранятся на стороне сервиса, а не в приложении, поэтому вход восстанавливается через браузер.</p></div></details>
+      <details id="q-apk"><summary><span>Демо-игра в браузере предлагает установить APK — соглашаться?</span><svg class="mig-pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="mig-body"><p>Нет. Честный демо-режим запускается в браузере и ничего не ставит на телефон. Кнопка «установить приложение» в бесплатной игре со стороннего сайта — типичный загрузчик: файл просит разрешение на установку из неизвестных источников, затем доступ к спецвозможностям или показу поверх других окон. Через это работают банковские оверлеи и перехват кодов. Если нужна именно программа, берите её из официального магазина; APK вне магазина ставьте только с домена самого оператора и сверяйте подпись и имя пакета.</p></div></details>
+      <details id="q-pwa"><summary><span>Чем PWA-ярлык отличается от APK для игры на телефоне?</span><svg class="mig-pm" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="mig-body"><p>PWA — это сайт, добавленный на домашний экран: отдельный значок, полноэкранный режим, но работает в песочнице браузера и не получает доступ к SMS, контактам или памяти системно. APK — полноценная программа с собственными разрешениями и возможностью работать в фоне. Для разовой партии и демо хватает браузера или PWA. Нативная сборка нужна ради входа по отпечатку и push-уведомлений; за это она платит более широким доступом, который стоит проверять в настройках разрешений.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CARE / CTA -->
+<section class="mig-sec" id="care">
+  <div class="mig-wrap">
+    <div class="mig-care">
+      <h2>Ответственная игра <span class="mig-age">18+</span></h2>
+      <p class="mig-dim" style="margin-top:var(--g3)">У азартных игр отрицательное математическое ожидание: на дистанции перевес у заведения. Телефон делает игру всегда под рукой, и это главный риск контроля. Поставьте лимит времени и депозита до первой ставки, включите напоминания о паузах, при потере контроля используйте самоисключение. Лудомания лечится, и просьба о помощи — не повод для стыда.</p>
+    </div>
+    <div class="mig-cta">
+      <span class="t">Новые случаи с играми на телефоне разбираем в канале</span>
+      <a class="mig-btn" href="https://t.me/top_casino_2027" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 3.3 2.9 10.6c-1.1.4-1 1 0 1.4l4.8 1.5 1.8 5.6c.2.6.4.8.9.4l2.7-2 5.6 4.1c.9.5 1.4.2 1.7-.9L22.9 4.6c.3-1-.3-1.6-1.2-1.3Z"/></svg>Telegram-канал</a>
+    </div>
+    <p class="mig-small mig-faint" id="chan">Обновлено 1 октября 2026 · Редакция «Экран под рукой». Без рекламы сервисов и партнёрских ссылок.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="mig-wide">
+    <div><p><b>Экран под рукой</b> — независимый разбор ситуаций с играми на смартфоне. Материал объясняет механику случаев и безопасные шаги, не продвигает сервисы.</p></div>
+    <div><p><b>Разделы:</b> <a href="#cases">карта случаев</a> · <a href="#access">доступы</a> · <a href="#apk">APK из демо</a> · <a href="#source">проверка источника</a>. Обновлено 1 октября 2026.</p></div>
+    <div><p><b>18+.</b> Азартные игры связаны с риском и не являются источником дохода. Материалы не призывают к участию в них.</p><p>© 2026 · Исследовательско-справочный проект. Примеры общие, факты проверяемые.</p></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var top=document.getElementById('top');
+  addEventListener('scroll',function(){top.classList.toggle('pinned',scrollY>8)},{passive:true});
+
+  var links=[].slice.call(document.querySelectorAll('.mig-nav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id?'true':'false')})}})},{rootMargin:'-42% 0px -53% 0px'});
+    secs.forEach(function(s){io.observe(s)});
+  }
+
+  var chips=[].slice.call(document.querySelectorAll('.mig-chip[data-filter]'));
+  var rows=[].slice.call(document.querySelectorAll('#caseTable tbody tr'));
+  var count=document.getElementById('caseCount');
+  function apply(f){var n=0;rows.forEach(function(r){var ok=f==='all'||(r.getAttribute('data-tags')||'').split(' ').indexOf(f)>-1;r.hidden=!ok;if(ok)n++});
+    count.textContent=f==='all'?'':'Показано '+n+' из '+rows.length;
+    chips[0].firstChild.nodeValue=f==='all'?'Все ':'Сбросить × ';}
+  chips.forEach(function(c){c.addEventListener('click',function(){var f=c.getAttribute('data-filter');if(c.getAttribute('aria-pressed')==='true'&&f!=='all'){f='all';}
+    chips.forEach(function(x){x.setAttribute('aria-pressed',x.getAttribute('data-filter')===f?'true':'false')});apply(f)})});
+
+  var tbtn=document.getElementById('theme');
+  tbtn.addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme');
+    var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
+    var next=cur?(cur==='dark'?'light':'dark'):(dark?'light':'dark');
+    document.documentElement.setAttribute('data-theme',next);
+  });
+})();
+</script>
+</body>
+</html>

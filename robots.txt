@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mobilnoe-igry971.github.io/sitemap.xml
